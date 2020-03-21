@@ -6,7 +6,7 @@ set -o pipefail
 rm -rf build-windows-win64
 mkdir build-windows-win64
 pushd build-windows-win64
-cmake -G "Visual Studio 17 Win64" ..
+cmake -G "Visual Studio 15 2017 Win64" ..
 cmake --config Debug --build .
 cmake --config Release --build .
 popd
@@ -14,7 +14,7 @@ popd
 rm -rf build-windows-win32
 mkdir build-windows-win32
 pushd build-windows-win32
-cmake -G "Visual Studio 17" ..
+cmake -G "Visual Studio 15 2017" ..
 cmake --config Debug --build .
 cmake --config Release --build .
 popd
