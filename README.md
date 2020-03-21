@@ -21,4 +21,6 @@ cmake --build .
 
 # License
 
+Created by Alexander O'Mara and Forrest Topping.
+
 Licensed under the Mozilla Public License, v. 2.0.
