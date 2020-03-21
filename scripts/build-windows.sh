@@ -20,8 +20,5 @@ cmake --build . --config Release
 popd
 
 mkdir -p dist
-file build-windows-win64/bin/Release/CyberAttack.exe
-file build-windows-win32/bin/Release/CyberAttack.exe
-
-# cp build-windows-win64-release/bin/CyberAttack.exe dist/CyberAttack-windows-win64.exe
-# cp build-windows-win32-release/bin/CyberAttack.exe dist/CyberAttack-windows-win32.exe
+cp build-windows-win64/bin/Release/CyberAttack.exe dist/CyberAttack-windows-win64.exe
+cp build-windows-win32/bin/Release/CyberAttack.exe dist/CyberAttack-windows-win32.exe
