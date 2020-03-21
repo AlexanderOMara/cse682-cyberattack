@@ -16,29 +16,23 @@ matrix:
         - g++-8
     env:
     - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+    script:
+    - ./scripts/build-linux.sh
 
   - stage: test
     os: osx
     osx_image: xcode11.3 # OS X 10.14
     env:
     - MATRIX_EVAL=""
+    script:
+    - ./scripts/build-mac.sh
 
   - stage: test
     os: windows
     env:
     - MATRIX_EVAL=""
+    script:
+    - ./scripts/build-windows.sh
 
 before_install:
 - eval "${MATRIX_EVAL}"
-
-script:
-- mkdir build-debug
-- pushd build-debug
-- cmake -DCMAKE_BUILD_TYPE=Debug ..
-- cmake --build .
-- popd
-- mkdir build-release
-- pushd build-release
-- cmake -DCMAKE_BUILD_TYPE=Release ..
-- cmake --build .
-- popd
