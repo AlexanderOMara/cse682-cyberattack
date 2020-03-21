@@ -9,6 +9,11 @@ An Attack based Cyber Training
 ![](screenshots/menu.png)
 
 
+# Download
+
+Official binaries can be found under the releases section of this repository.
+
+
 # Building
 
 To build from source, use the standard CMake commands.
