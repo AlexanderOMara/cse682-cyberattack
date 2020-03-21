@@ -36,3 +36,14 @@ before_install:
 
 script:
 - "${MATRIX_SCRIPT}"
+
+deploy:
+  provider: releases
+  api_key:
+    secure: $GITHUB_API_KEY
+  file_glob: true
+  file:
+  - dist/*
+  skip_cleanup: true
+  on:
+    tags: true
