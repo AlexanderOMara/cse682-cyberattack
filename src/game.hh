@@ -1,5 +1,6 @@
 #pragma once
 
+#include "string"
 #include "vector"
 
 #include "level.hh"
@@ -36,4 +37,21 @@ class Game {
 		 * Level instances.
 		 */
 		std::vector<Level *> levels;
+
+		/**
+		 * Get save file path.
+		 *
+		 * @returns The save file path.
+		 */
+		std::string saveFilePath();
+
+		/**
+		 * Read save file into finishedLevel if exists.
+		 */
+		void saveFileRead();
+
+		/**
+		 * Write finishedLevel into save file.
+		 */
+		void saveFileWrite();
 };
