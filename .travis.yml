@@ -3,7 +3,7 @@ language: cpp
 stages:
 - test
 - name: deploy
-  if: type = tag
+  if: tag
 
 matrix:
   include:
